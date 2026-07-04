@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apex Bharat — Swadeshi Vibe-to-Code Holodeck Sandbox</title>
+  <!-- SEO Metadata -->
+  <meta name="description" content="Build and deploy instant landing pages for the Indian market. Localized templates with UPI Auto-pay, WhatsApp automation, and GST readiness.">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="holodeck-container">
+    
+    <!-- LEFT PANEL: WORKSPACE, CHAT, SPECS & STRATEGY -->
+    <section class="left-pane">
+      
+      <!-- Top header inside pane -->
+      <header class="pane-header">
+        <div class="logo-area">
+          <div class="logo-symbol">
+            <i class="fa-solid fa-om"></i>
+          </div>
+          <div class="logo-text">
+            <h1>APEX <span>BHARAT</span></h1>
+            <div class="status-indicator">
+              <span class="pulse-dot"></span>
+              <span class="status-label" id="status-mode">Swadeshi Engine Active</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Quick Stats -->
+        <div class="pane-metrics">
+          <button class="btn btn-secondary btn-xs" id="btn-pivot-vibe">
+            <i class="fa-solid fa-shuffle"></i> Pivot Vibe
+          </button>
+          <button class="btn btn-primary btn-xs" id="btn-launch-deploy">
+            <i class="fa-solid fa-rocket"></i> Launch Project
+          </button>
+        </div>
+      </header>
+
+      <!-- Chat Interface for typing vibes -->
+      <div class="chat-section glassmorphic">
+        <div class="section-title">
+          <h3><i class="fa-solid fa-comments icon-cyan"></i> Vibe Controller</h3>
+          <span class="active-badge" id="active-aesthetic">Clean SaaS</span>
+        </div>
+        
+        <!-- Live Chat Message Stream -->
+        <div class="chat-message-stream" id="chat-messages">
+          <div class="chat-msg system">
+            <div class="msg-avatar"><i class="fa-solid fa-robot"></i></div>
+            <div class="msg-content">
+              <p>Namaste! Welcome to the <strong>Apex Bharat Engine</strong>. Type the vibe, mood, or concept of the Indian business app you want to build.</p>
+              <div class="example-pills">
+                <button class="example-pill">"Cyberpunk Bharat Ledger with automated GST compliance"</button>
+                <button class="example-pill">"Calm YogSana studio scheduler and Ayurvedic wellness hub"</button>
+                <button class="example-pill">"Sahayak AI customer support with WhatsApp and UPI auto-pay"</button>
+                <button class="example-pill">"Bold Neo-Brutalist D2C shopping cart for masala brand"</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Chat Input Form -->
+        <form id="vibe-chat-form" class="chat-input-area">
+          <input type="text" id="vibe-input" placeholder="Describe the Indian startup vibe (e.g. Sahayak AI support)..." required autocomplete="off">
+          <button type="submit" class="btn btn-primary" id="btn-send-vibe">
+            <i class="fa-solid fa-arrow-up"></i>
+          </button>
+        </form>
+      </div>
+
+      <!-- Specs & Strategy Tabbed Section -->
+      <div class="specs-section glassmorphic">
+        
+        <!-- Tab Headers -->
+        <div class="tabs-header">
+          <button class="tab-btn active" data-tab="tab-strategy">
+            <i class="fa-solid fa-briefcase"></i> Swadeshi Strategy
+          </button>
+          <button class="tab-btn" data-tab="tab-technical">
+            <i class="fa-solid fa-code-compare"></i> Design System
+          </button>
+          <button class="tab-btn" data-tab="tab-code">
+            <i class="fa-solid fa-code"></i> Compiled HTML
+          </button>
+        </div>
+
+        <!-- Tab Contents -->
+        <div class="tabs-body">
+          
+          <!-- Tab 1: Business Strategy -->
+          <div class="tab-pane active" id="tab-strategy">
+            <div class="strategy-grid">
+              
+              <div class="strategy-card">
+                <h4><i class="fa-solid fa-coins icon-mint"></i> Monetization Model</h4>
+                <p id="strategy-model">UPI-based Subscription SaaS. Pricing starting at ₹3,999/mo, integrated with Razorpay Auto-Pay API.</p>
+              </div>
+
+              <div class="strategy-card">
+                <h4><i class="fa-solid fa-user-gear icon-cyan"></i> Target Audience Persona</h4>
+                <p id="strategy-persona">Indian SME operators and Bengaluru/Gurgaon tech founders looking to automate client touchpoints via WhatsApp.</p>
+              </div>
+
+              <div class="strategy-card col-span-2">
+                <h4><i class="fa-solid fa-calendar-check icon-purple"></i> 30-Day Go-To-Market Checklist</h4>
+                <ul class="checklist-items" id="strategy-checklist">
+                  <li><i class="fa-solid fa-chevron-right text-purple"></i> Design 3 localized Landing Pages matching Swadeshi design schemes.</li>
+                  <li><i class="fa-solid fa-chevron-right text-purple"></i> Set up automated WhatsApp alerts and API webhooks via Decentro.</li>
+                  <li><i class="fa-solid fa-chevron-right text-purple"></i> Pitch directly to MSME hubs in Gurgaon, Noida, Pune, and Bengaluru.</li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Tab 2: Technical Design System Specs -->
+          <div class="tab-pane" id="tab-technical">
+            <div class="technical-grid">
+              
+              <div class="tech-card">
+                <h4>Tech Stack Suggestions</h4>
+                <ul class="tech-stack-list" id="tech-stack-output">
+                  <li><i class="fa-brands fa-react text-cyan"></i> Next.js 14 / React 18</li>
+                  <li><i class="fa-brands fa-css3-alt text-blue"></i> Tailwind CSS / Lucide icons</li>
+                  <li><i class="fa-solid fa-indian-rupee-sign text-purple"></i> India Stack API / UPI Gateway</li>
+                </ul>
+              </div>
+
+              <div class="tech-card">
+                <h4>CSS Color Palette</h4>
+                <div class="palette-container" id="color-palette-output">
+                  <div class="color-swatch-box">
+                    <div class="color-circle" style="background-color: #f97316;"></div>
+                    <span>Primary Saffron (#f97316)</span>
+                  </div>
+                  <div class="color-swatch-box">
+                    <div class="color-circle" style="background-color: #0284c7;"></div>
+                    <span>Secondary Peacock (#0284c7)</span>
+                  </div>
+                  <div class="color-swatch-box">
+                    <div class="color-circle" style="background-color: #10b981;"></div>
+                    <span>Emerald Success (#10b981)</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tech-card col-span-2">
+                <h4>Landing Page Wireframe Schema</h4>
+                <div class="wireframe-schema-list" id="wireframe-schema-output">
+                  <span class="wf-pill">Navbar Navigation</span>
+                  <span class="wf-pill">Hero Segment</span>
+                  <span class="wf-pill">Features Grid</span>
+                  <span class="wf-pill">Pricing Grid</span>
+                  <span class="wf-pill">Footer Area</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Tab 3: Compiled Code -->
+          <div class="tab-pane" id="tab-code">
+            <div class="code-view-container">
+              <div class="code-header">
+                <span>compiled_index.html</span>
+                <button class="btn btn-secondary btn-xs" id="btn-copy-code"><i class="fa-solid fa-copy"></i> Copy Code</button>
+              </div>
+              <textarea id="code-output-area" readonly placeholder="Waiting for code output..."></textarea>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- RIGHT PANEL: LIVE PREVIEW "HOLODECK" -->
+    <section class="right-pane">
+      <div class="preview-frame-container">
+        
+        <!-- Browser Bar Control -->
+        <div class="preview-browser-bar">
+          <div class="browser-dots">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+          </div>
+          <div class="browser-address">
+            <i class="fa-solid fa-lock text-emerald-500"></i>
+            <span id="preview-url">http://localhost:8000</span>
+          </div>
+          <div class="device-toggles">
+            <button class="device-toggle active" id="btn-view-desktop" title="Desktop View"><i class="fa-solid fa-desktop"></i></button>
+            <button class="device-toggle" id="btn-view-mobile" title="Mobile View"><i class="fa-solid fa-mobile-screen-button"></i></button>
+            <button class="device-toggle" id="btn-refresh-preview" title="Refresh Live"><i class="fa-solid fa-rotate-right"></i></button>
+          </div>
+        </div>
+
+        <!-- The Sandbox Render Sandbox -->
+        <div class="preview-iframe-wrapper" id="preview-wrapper">
+          <iframe id="preview-iframe" title="Live UI Preview"></iframe>
+        </div>
+
+      </div>
+    </section>
+
+  </div>
+
+  <!-- DEPLOYMENT MODAL -->
+  <div class="modal-overlay" id="deploy-modal">
+    <div class="modal-box glassmorphic animate-zoom max-w-500">
+      <div class="modal-header">
+        <h3><i class="fa-solid fa-circle-notch fa-spin icon-cyan" id="deploy-modal-icon"></i> <span id="deploy-modal-title">Deploying Project...</span></h3>
+        <span class="modal-close" id="deploy-modal-close-btn">&times;</span>
+      </div>
+      <div class="modal-body">
+        
+        <!-- Deployment Status Steps -->
+        <div class="deploy-steps-container" id="deploy-steps-container">
+          <!-- Steps injected by app.js -->
+        </div>
+
+        <div class="deploy-success-box" id="deploy-success-box" style="display: none;">
+          <div class="success-icon-badge">
+            <i class="fa-solid fa-circle-check"></i>
+          </div>
+          <h4>Project Successfully Deployed!</h4>
+          <p>Your application codebase is committed to GitHub and synced with Vercel's global edge network.</p>
+          
+          <div class="link-rows">
+            <div class="link-row">
+              <strong>GitHub Repo:</strong>
+              <a href="#" id="result-repo-link" target="_blank">https://github.com/apex-agent/... <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+            <div class="link-row">
+              <strong>Live Site:</strong>
+              <a href="#" id="result-site-link" target="_blank">https://vibe-to-code-...vercel.app <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" type="button" id="btn-close-deploy-modal">Dismiss Window</button>
+        <a href="#" class="btn btn-primary" id="btn-open-live-site" target="_blank" style="display: none;">Open Live Application <i class="fa-solid fa-external-link"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOAST BANNER -->
+  <div class="notification-toast" id="toast">
+    <div class="toast-icon" id="toast-icon-div"><i class="fa-solid fa-circle-check"></i></div>
+    <div class="toast-content">
+      <div class="toast-title" id="toast-title-text">Notification</div>
+      <div class="toast-message" id="toast-msg-text">Details here.</div>
+    </div>
+  </div>
+
+  <!-- Application Logic -->
+  <script src="app.js"></script>
+</body>
+</html>
