@@ -9,8 +9,8 @@ const PORT = process.env.PORT || 3000;
 app.use(cors());
 app.use(express.json());
 
-// Serve static dashboard files from the current directory
-app.use(express.static(__dirname));
+// Serve static dashboard files from the parent directory (root of the workspace)
+app.use(express.static(path.join(__dirname, '..')));
 
 // --- AESTHETIC COMPILER ENGINE (BHARAT EDITION) ---
 
@@ -350,9 +350,9 @@ function generateStrategy(aesthetic, outline) {
     ];
   } else if (aesthetic.name.includes("Zen")) {
     model = "Premium Yoga Membership Packs";
-    targetPersona = "Wellness seekers and organic food founders looking for authentic Yoga & Ayurveda scheduling platforms.";
+    targetPersona = "Wellness seekers and organic food founders looking for active Yoga & Ayurveda scheduling platforms.";
     checklist = [
-      "Establish earthy branding guidelines focusing on organic leaf-tones and warm sand colors.",
+      "Establish earthy branding guidelines focusing on relaxing earth-tones and modern serif typography.",
       "Publish calm, organic video walk-throughs showcasing the YogSana calendar tools on Instagram.",
       "Partner with wellness wellness centers in Rishikesh, Goa, and Kerala for cross-promotional leads."
     ];
@@ -365,11 +365,11 @@ function generateStrategy(aesthetic, outline) {
       "Integrate decimals-free UPI fast payments checkout buttons."
     ];
   } else if (aesthetic.name.includes("Brutalist")) {
-    model = "Pay-Per-Alert WhatsApp Usage Fees";
-    targetPersona = "Local Kirana franchise operators and design-forward D2C retail founders in Bengaluru.";
+    model = "Pay-Per-Task Consumption Plan";
+    targetPersona = "Design-forward product builders and high-intensity tech hackers demanding radical, bold interfaces.";
     checklist = [
       "Promote the project using heavy outline, raw high-contrast graphics on Indian dev subreddits and X.",
-      "Deliver automated order-tracking notifications directly into customers' WhatsApp feeds.",
+      "Release an open-source command-line tool accompanying the web dashboard.",
       "Host a fast-paced virtual building hackathon to seed community Kirana templates."
     ];
   }
