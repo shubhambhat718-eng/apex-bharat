@@ -444,7 +444,12 @@ app.post('/api/deploy', (req, res) => {
   });
 });
 
-// Start listening
-app.listen(PORT, () => {
-  console.log(`[APEX SERVER] Running at http://localhost:${PORT}`);
-});
+// Export the app for Vercel Serverless Functions
+module.exports = app;
+
+// Start listening if run directly (local mode)
+if (require.main === module) {
+  app.listen(PORT, () => {
+    console.log(`[APEX SERVER] Running at http://localhost:${PORT}`);
+  });
+}
